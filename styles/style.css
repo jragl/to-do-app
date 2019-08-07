@@ -4,16 +4,15 @@ body {
   margin-left: 50px;
 }
 
-toDoList.li {
-  font-size: 30em;
-  font-weight: bold;
-}
-
 ul, ol {
     font-size: 18px;
     line-height: 24px
 }
 
+li.toDoList.checkbox__input {
+  height: 25px;
+  width: 25px;
+}
 @media screen and (max-width: 1024px) {
   header.mdl-layout__header {
     display: flex;
