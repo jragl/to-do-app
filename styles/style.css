@@ -26,6 +26,10 @@ body {
   background-color: #07598C;
 }
 
+.mdl-layout__header {
+  color: black;
+}
+
 #addToDoForm {
   text-align: center;
   margin-top: 10px;
@@ -99,4 +103,10 @@ ul li.checked::before {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
+}
+
+@media screen and (max-width: 1024px) {
+  header.mdl-layout__header {
+    display: flex;
+  }
 }
