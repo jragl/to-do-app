@@ -11,8 +11,8 @@ body {
 .mdl-button {
   width: 15%;
   margin-left: 10px;
-  background: #157FFB;
-  color: white;
+  background-color: #157FFB !important;
+  color: white !important;
   float: center;
   text-align: center;
   font-size: 16px;
@@ -23,7 +23,11 @@ body {
 }
 
 .mdl-button:hover {
-  background-color: #07598C;
+  background-color: #07598C !important;
+}
+
+.mdl-layout__header {
+  color: black;
 }
 
 #addToDoForm {
@@ -38,12 +42,13 @@ button {
   border-radius: 5px;
   background: #DA3749;
   border-color: #C0C0C0;
-  height: 2em;
+  height: 25px;
   width: 100px;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #DA3749 0.8;
+  background-color: rgba(218, 55, 73, 0.8);
   color: white;
 }
 
@@ -62,7 +67,6 @@ header {
 
 /* Style the list items */
 ul li {
-  cursor: pointer;
   position: relative;
   padding: 10px;
   list-style-type: none;
@@ -80,23 +84,26 @@ ul li:hover {
   background: #ddd;
 }
 
+/* Style the checkbox */
+input[type=checkbox] {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+input[type=checkbox]:hover {
+  box-shadow:0px 0px 10px #1300ff;
+}
+
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+checkbox-custom:checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
+@media screen and (max-width: 1024px) {
+  header.mdl-layout__header {
+    display: flex;
+  }
 }
